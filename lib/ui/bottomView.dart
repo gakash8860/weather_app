@@ -8,11 +8,11 @@ Widget bottomView(AsyncSnapshot<WeatherForeCastModel> snapshot,BuildContext cont
   return Column(
     mainAxisAlignment: MainAxisAlignment.start,
     children: <Widget>[
-    Text("7-Day Weather Forecast".toLowerCase(),
-      style: TextStyle(
-        fontSize: 18,
-        color: Colors.black87
-      ),),
+    // Text("7-Day Weather Forecast".toLowerCase(),
+    //   style: TextStyle(
+    //     fontSize: 18,
+    //     color: Colors.black87
+    //   ),),
       Container(
         height: 170,
         padding: EdgeInsets.symmetric(vertical: 16,horizontal: 10),
