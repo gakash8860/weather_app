@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/network/network.dart';
+import 'package:weather_app/ui/bottomView.dart';
 import 'package:weather_app/ui/mideView.dart';
 import 'package:weather_app/util/forecastutil.dart';
 import 'package:weather_app/weather_forecast/weatherForeCastModel.dart';
@@ -43,7 +44,8 @@ return Scaffold(
             if(snapshot.hasData){
               return Column(
                 children: <Widget>[
-                  midView(snapshot)
+                  midView(snapshot),
+                  bottomView(snapshot, context)
                 ],
               );
             }else{

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:weather_app/util/conver_icon.dart';
 import 'package:weather_app/util/forecastutil.dart';
 import 'package:weather_app/weather_forecast/weatherForeCastModel.dart';
 
@@ -23,8 +24,12 @@ Container midView= Container(
           fontSize: 15
         ),),
         SizedBox(height: 10,),
-        Icon(FontAwesomeIcons.cloud,size: 198,color: Colors.grey,),
+        // Icon(FontAwesomeIcons.cloud,size: 198,color: Colors.grey,),
         // Icon(Icons.wb_sunny,size: 20,),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: getWeatherIcon(weatherDescription: forecastList[0].weather[0].main,color: Colors.amberAccent,size: 198),
+        ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 12.0,horizontal: 12.0),
           child: Row(
@@ -78,7 +83,7 @@ Container midView= Container(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
 
-                      Text("${forecastList[0].temp.max} ℉"),
+                      Text("${forecastList[0].temp.max.toStringAsFixed(0)} ℉"),
                       Icon(FontAwesomeIcons.temperatureHigh,size: 20,),
                       // Icon(Icons.hot_tub ,size: 20,color: Colors.brown,)
                     ],
